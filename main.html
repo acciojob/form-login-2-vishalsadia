@@ -1,16 +1,43 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-	<link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
 </head>
-
 <body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
+
+    <form id="loginForm">
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="First Name" required><br>
+
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="Last Name" required><br>
+
+        <label for="phoneNumber">Phone Number:</label>
+        <input type="tel" id="phoneNumber" name="Phone Number" required><br>
+
+        <label for="email">Email ID:</label>
+        <input type="email" id="email" name="Email ID" required><br>
+
+        <input type="button" value="Submit" onclick="submitForm()">
+    </form>
+
+    <script>
+        function submitForm() {
+            var firstName = document.getElementById("firstName").value;
+            var lastName = document.getElementById("lastName").value;
+            var phoneNumber = document.getElementById("phoneNumber").value;
+            var email = document.getElementById("email").value;
+
+            var result = "First Name: " + firstName + "\n" +
+                         "Last Name: " + lastName + "\n" +
+                         "Phone Number: " + phoneNumber + "\n" +
+                         "Email ID: " + email;
+
+            alert(result);
+        }
+    </script>
 
 </body>
-
 </html>
